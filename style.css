@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #202124;
+    color: #e8eaed;
+    font-family: "Roboto",arial,sans-serif;
+    font-size: 20px;
+}
+.task-tracker-template{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 45%;
+    padding: 0px 0;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+    /* padding-bottom: 50px; */
+    box-shadow: inset 1px 1px 0 rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 7%);
+}
+
+.task-tracker-template .task-title{
+    width: 100%;
+    border: none;
+    padding-bottom: 20px;
+    font-size: 25px;
+    color: floralwhite;
+    border-bottom: 0.5px solid rgba(250, 250, 250, 0.2);
+    display: none;
+}
+/* .task-tracker-template .list-items:focus +input[type=text]{
+    display: block;
+} */
+.task-tracker-template .task-items{
+    overflow: hidden;
+}
+.task-tracker-template .task-item{
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    overflow-y: hidden;
+    border-bottom: 0.5px solid rgba(250, 250, 250, 0.2);
+}
+.task-tracker-template input{
+    outline: none;
+    background-color: #202124;
+    color: #e8eaed;
+    padding: 7px 15px;
+    font-weight: normal;
+    border: none;
+    display: inline-block;
+}
+.task-tracker-template button{
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #e8eaed;
+    padding: 8px 25px;
+    display: none;
+}
+.task-tracker-template button:hover{
+    background-color: rgba(154, 160, 166, 0.039);
+    color: #d3d5d7;
+}
+
+.tasks-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+.tasks-container .task{
+    width: 250px;
+    overflow: hidden;
+}
+.tasks-container .task:hover{
+    outline: auto;
+}
+
+input[type="checkbox"]:checked .task-content{
+    text-decoration: line-through;
+}
